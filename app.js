@@ -40,7 +40,6 @@ app.get('/', (req, res) => {
 
 app.post('/issue-number', (req, res) => {
   let numbers = req.body.numbers
-  console.log(numbers)
   io.sockets.emit('update_cardboard', { numbers })
   res.send('Numbers')
 })
